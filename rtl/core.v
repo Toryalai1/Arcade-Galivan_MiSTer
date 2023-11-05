@@ -110,7 +110,7 @@ always @(posedge clk_sys)
 	if (~clk_en_6 & mcpu_mreq_n & mcpu_iorq_n) real_pause <= pause;
 
 
-t80s mcpu(
+tv80s mcpu(
   .reset_n ( ~reset      ),
   .clk     ( clk_sys     ),
   .cen     ( clk_en_6 & (!cpu1_rom_cs | cpu1_rom_valid) & !real_pause ),
@@ -327,7 +327,7 @@ always @(posedge clk_sys) begin
   if (~acpu_iorq_n & ~acpu_m1_n) acpu_int_n <= 1'b1;
 end
 
-t80s acpu(
+tv80s acpu(
   .reset_n ( ~reset      ),
   .clk     ( clk_sys     ),
   .cen     ( clk_en_4 & (!cpu2_rom_cs | cpu2_rom_valid) ),
