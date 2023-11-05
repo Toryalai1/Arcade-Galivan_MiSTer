@@ -128,7 +128,7 @@ tv80s mcpu(
   .busak_n (             ),
   .A       ( mcpu_addr   ),
   .di      ( mcpu_din    ),
-  .do      ( mcpu_dout   )
+  .dout    ( mcpu_dout   )
 );
 
 /******** MCPU MEMORY CS ********/
@@ -345,7 +345,7 @@ tv80s acpu(
   .busak_n (             ),
   .A       ( acpu_addr   ),
   .di      ( acpu_din    ),
-  .do      ( acpu_dout   )
+  .dout    ( acpu_dout   )
 );
 
 
