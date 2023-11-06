@@ -399,22 +399,6 @@ core u_core(
 	.sp_on          ( 1'b1             ),
 	.fdiv           ( 2'b0             ),
 
-	.cpu1_rom_cs    ( cpu1_rom_cs      ),
-	.cpu1_rom_addr  ( cpu1_rom_addr    ),
-	.cpu1_rom_q     ( cpu1_rom_addr[0] ? cpu1_rom_do[15:8] : cpu1_rom_do[7:0] ),
-	.cpu1_rom_valid ( cpu1_rom_valid   ),
-	.cpu2_rom_cs    ( cpu2_rom_cs      ),
-	.cpu2_rom_addr  ( cpu2_rom_addr    ),
-	.cpu2_rom_q     ( cpu2_rom_addr[0] ? cpu2_rom_do[15:8] : cpu2_rom_do[7:0] ),
-	.cpu2_rom_valid ( cpu2_rom_valid   ),
-
-	.gfx1_rom_addr  ( gfx1_rom_addr    ),
-	.gfx1_rom_q     ( gfx1_rom_addr[0] ? gfx1_rom_do[15:8] : gfx1_rom_do[7:0] ),
-	.gfx2_rom_addr  ( gfx2_rom_addr    ),
-	.gfx2_rom_q     ( gfx2_rom_addr[0] ? gfx2_rom_do[15:8] : gfx2_rom_do[7:0] ),
-	.gfx3_rom_addr  ( gfx3_rom_addr    ),
-	.gfx3_rom_q     ( gfx3_rom_addr[0] ? gfx3_rom_do[15:8] : gfx3_rom_do[7:0] ),
-	.gfx3_rom_ready ( gfx3_rom_ready   )
 );
 
 reg  [26:0] act_cnt;
