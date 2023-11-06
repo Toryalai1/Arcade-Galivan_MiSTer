@@ -393,11 +393,11 @@ core u_core(
 	.vs             ( VSync            ),
 	.hb             ( HBlank           ),
 	.sound          ( sound            ),
-	.hflip          ( flip             ),
-	.bg_on          ( 1'b1             ),
-	.tx_on          ( 1'b1             ),
-	.sp_on          ( 1'b1             ),
-	.fdiv           ( 2'b0             ),
+  .hflip          ( status[11]       ),
+  .bg_on          ( ~status[18]      ),
+  .tx_on          ( ~status[19]      ),
+  .sp_on          ( ~status[20]      ),
+  .fdiv           ( status[2:1]      )
 
 );
 
